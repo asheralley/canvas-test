@@ -24,12 +24,12 @@ nav {
 
 .nav-right {
   display: inline-block;
+  /* background-color: #232323; */
 }
 
 
 
 .nav-list{
-  font-size: 1.4em;
   text-transform: uppercase;
   display: inline-block;
   list-style: none;
@@ -38,7 +38,45 @@ nav {
 .nav-list li{
   font-weight: 300;
   display: inline;
-  margin-left: 2.5em;
+  margin-left: 3em;
+  font-size: 1.25em;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.nav-list li a::before,
+.nav-list li a::after{
+  content: '/';
+  position: absolute;
+  opacity: 0;
+  transition: all ease-in-out 0.22s;
+}
+
+.nav-list li a::before {
+  top: 0;
+  left: 0;
+  transform: translate(-300%, 100%);
+}
+
+
+.nav-list li a::after{
+  bottom: 0;
+  left: 0;
+  transform: translate(-100%, -100%);
+}
+
+.nav-list li a:hover:before {
+  transform: translate(-150%, 0);
+  opacity: 1;
+}
+
+.nav-list li a:hover:after {
+  transform: translate(-250%, 0);
+  opacity: 1;
 }
 
 .nav-sprites {
