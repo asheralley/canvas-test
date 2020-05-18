@@ -9,7 +9,7 @@ let particleArray;
 let mouse = {
   x: null,
   y: null,
-  radius: 50
+  radius: 80
 };
 
 window.addEventListener('mousemove', function(event) {
@@ -58,23 +58,23 @@ Particle.prototype.update = function() {
   if (distance < mouse.radius + this.size) {
     if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
       // this.x += 1;
-      this.directionX = dx / 2 / distance;
+      this.directionX = dx / distance * 0.4;
       console.log(dx);
     }
     if (mouse.x > this.x && this.x > this.size * 10) {
       // this.x -= 1;
       // this.directionX = (dx / 2) * 0.05;
-      this.directionX = dx / 2 / distance;
+      this.directionX = dx / distance * 0.4;
     }
     if (mouse.y < this.x && this.x < canvas.height - this.size * 10) {
       //this.y += 1;
       // this.directionY = (dy / 2) * 0.05;
-      this.directionY = dy / 2 / distance;
+      this.directionY = dy / distance * 0.4;
     }
     if (mouse.y > this.x && this.y > this.size * 10) {
       // this.y -= 1;
       // this.directionY = (dy / 2) * 0.05;
-      this.directionY = dy / 2 / distance;
+      this.directionY = dy / distance * 0.4;
     }
   }
 
@@ -88,13 +88,14 @@ Particle.prototype.update = function() {
 
 function init() {
   particleArray = [];
+  // adjust number of particles based on screen size
   for (let i = 0; i < 150; i++) {
-    let size = 2;
+    let size = 0.3;
     let x = Math.random() * (innerWidth - size * 2);
     let y = Math.random() * (innerHeight - size * 2);
     let directionX = Math.random() * 0.4 - 0.2;
     let directionY = Math.random() * 0.4 - 0.2;
-    let color = '#232323';
+    let color = '#ececec';
 
     particleArray.push(new Particle(x, y, directionX, directionY, size, color));
   }
@@ -123,7 +124,7 @@ function connect() {
         (particleArray[a].y - particleArray[b].y) *
           (particleArray[a].y - particleArray[b].y);
       if (distance < (canvas.width / 7) * (canvas.height / 7)) {
-        opacityValue = 1 - distance / 20000;
+        opacityValue = 1 - distance / 30000;
         ctx.strokeStyle = 'rgba(140,140,140,' + opacityValue + ')';
         ctx.lineWidth = 1;
         ctx.beginPath();
@@ -139,7 +140,8 @@ function connect() {
 window.addEventListener('resize', function() {
   canvas.width = innerWidth;
   canvas.height = innerHeight;
-  mouse.radius = 50;
+  mouse.radius = 80;
+  this.console.log('working');
 });
 
 window.addEventListener('mouseout', function() {
