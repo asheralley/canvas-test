@@ -18,8 +18,14 @@ body{
 
 nav {
   color: #ececec;
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
+  display: inline;
+}
+
+.container {
+  max-width: 1700px;
+  margin: 0 auto;
 }
 
 .nav-right {
@@ -27,9 +33,7 @@ nav {
   /* background-color: #232323; */
 }
 
-
-
-.nav-list{
+.nav-list {
   text-transform: uppercase;
   display: inline-block;
   list-style: none;
@@ -38,7 +42,7 @@ nav {
 .nav-list li{
   font-weight: 300;
   display: inline;
-  margin-left: 3em;
+  margin-left: 5em;
   font-size: 1.25em;
 }
 
@@ -107,6 +111,25 @@ nav {
   align-items: center;
 }
 
+.name-main {
+  color: #ececec;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 3em;
+  text-align: center;
+}
+
+.nav-center {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+}
+
 h1{
   color: #ececec;
+}
+
+section {
+  min-height: 100vh;
 }
