@@ -13,51 +13,100 @@
         <nav>
           <div class="container">
             <div class="nav-right">
-              <img src="logo-nav.png" alt="">
+              <img src="img/logo-nav.png" alt="">
               <ul class="nav-list">
-                <li><a href="/about">About</a></li>
-                <li><a href="/work">Work</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
               </ul>
             </div>
-            <!-- <ul class="nav-sprites">
-              <li><img class="sprite" src="facebook-sprite.svg" alt=""></li>
-              <li><img class="sprite" src="github-sprite.svg" alt=""></li>
-              <li><img class="sprite" src="linkedin-sprite.svg" alt=""></li>
-            </ul> -->
           </div>
         </nav>
-        <div class="nav-center">
+        <!-- <div class="nav-center">
           <h2 class="name-nav">Asher Alley</h2>
-        </div>
+        </div> -->
         <div class="main-heading">
           <div>
-            <img src="logo-main.png" alt="">
+            <img src="img/logo-main.png" alt="">
             <h2 class="name-main">Asher Alley</h2>
           </div>
         </div>
       </div>
       <canvas id="canvas1"> </canvas>
     </section>
-    <section class="about">
+    <div class="container">
+      <div class="sticky-nav">
+        <ul class="sticky-nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
 
+    <section id="about" class="about">
+      <div class="container">
+        <h2>//About</h2>
+        <div class="about-content">
+          <div class="about-blurb">
+            <p>Hello, I'm Asher Alley, a front end web developer located in Albany, Auckland. I recently made the switch to web design and development after falling in love with coding and the creation of a website from original concepts to active, user-friendly sites. In late 2016 I completed a 3 month intensive boot camp at Yoobee School of Design in Front-End Web Development and since January of 2017 I have been sub contracting to Veratech Web Solutions. I have worked on several projects since then, for such companies as; REINZ, Dancing with Data and Mainly Books.</p>
+            <p>My current areas of focus are HTML, CSS and Javascript, although I am constantly aiming to improve my skills and learn new techniques. I am looking for a full-time job in web development that would allow me to challenge myself, broaden my knowledge and give me the opportunity to create fun, innovative websites that are easy to use.</p>
+            <p>Outside of web development I enjoy relaxing with my friends and family, reading, customizing my Linux environment and binge watching the Marvel movies.</p>
+            <p>Thank you for taking the time to view my portfolio. I would love the opportunity to meet with you.</p>
+          </div>
+          <div class="profile-img">
+              <img src="img/profile-pic.jpg" alt="">
+            <div class="details">
+              <a class="email" href="mailto:asher.asheralley@gmail.com">asher.asheralley@gmail.com</a>
+              <p>021 043 6351</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     
-    <section class="work">
-      <div class="row-work">
-        <img src="img/brand-guidelines-660.jpg" alt="">
-        <img src="img/dwd-660.jpg" alt="">
-        <img src="img/movie-660.jpg" alt="">
-      </div>
-      <div class="row-work">
-        <img src="img/reinz.jpg" alt="">
-        <img src="img/pops-660.jpg" alt="">
+    <section id="work" class="work">
+      <div class="container">
+        <h2>//Work</h2>
+        <div class="row-work">
+          <img src="img/brand-guidelines-660.jpg" alt="">
+          <img src="img/dwd-660.jpg" alt="">
+          <img src="img/movie-660.jpg" alt="">
+        </div>
+        <div class="row-work">
+          <img src="img/reinz.jpg" alt="">
+          <img src="img/pops-660.jpg" alt="">
+          <img src="quizzical" alt="">
+        </div>
       </div>
     </section>
 
-    <section class="contact">
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>//Contact</h2>
+        <!-- Contact form here -->
+        <p>Short message here.. I'd love to have a chat so feel free to get in touch below</p>
+        <form action="send_message.php">
+          <label for="name">Your name</label>
+          <input type="text" name="name" id="name">
+          <label for="email">Email address</label>
+          <input type="email" name="email" id="email">
+          <label for="message">Your message</label>
+          <textarea type="text" name="message" id="message"></textarea>
+          <input type="submit" value="Send message">
+        </form>
 
+
+        <div class="lower-footer">
+          <ul class="nav-sprites">
+            <li><img class="sprite" src="img/facebook-sprite.svg" alt=""></li>
+            <li><img class="sprite" src="img/github-sprite.svg" alt=""></li>
+            <li><img class="sprite" src="img/linkedin-sprite.svg" alt=""></li>
+          </ul>
+        </div>
+      </div>
     </section>
+
     <script src="script.js"></script>
   </body>
 </html>

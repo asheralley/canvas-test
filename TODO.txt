@@ -1,0 +1,7 @@
+-> Sticky nav
+-> Scroll to position
+-> About section
+-> Work section - hover effect on items
+-> Contact form
+-> Contact form functionality -> php form
+-> Get url and set up new droplet
