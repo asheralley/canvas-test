@@ -59,7 +59,6 @@ Particle.prototype.update = function() {
     if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
       // this.x += 1;
       this.directionX = dx / distance * 0.4;
-      console.log(dx);
     }
     if (mouse.x > this.x && this.x > this.size * 10) {
       // this.x -= 1;
@@ -141,7 +140,6 @@ window.addEventListener('resize', function() {
   canvas.width = innerWidth;
   canvas.height = innerHeight;
   mouse.radius = 80;
-  this.console.log('working');
 });
 
 window.addEventListener('mouseout', function() {
