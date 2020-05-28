@@ -9,11 +9,9 @@ body{
 }
 
 #canvas1 {
-  position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: #232323;
-  z-index: -99;
 }
 
 nav {
@@ -184,8 +182,8 @@ h1{
   color: #ececec;
 }
 
-section {
-  min-height: 100vh;
+section.home {
+  height: 100vh;
 }
 
 .section-heading {
@@ -209,5 +207,22 @@ section {
 
 .contact {
   background: #232323;
+}
+
+.dark {
+  color: #e3e3e3;
+}
+
+.contact-form {
+    width: 30%;
+    margin: 0 auto;
+}
+
+label.dark {
+    display: block;
+}
+
+input {
+  width: 100%;
 }
 

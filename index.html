@@ -86,20 +86,22 @@
     </section>
 
     <section id="contact" class="contact">
-      <div class="container">
+      <div class="container dark-bg">
         <div class="section-heading">
-          <h2>//Contact</h2>
+          <h2 class="dark">//Contact</h2>
         </div>
         <!-- Contact form here -->
-        <p>Short message here.. I'd love to have a chat so feel free to get in touch below</p>
         <form action="send_message.php">
-          <label for="name">Your name</label>
-          <input type="text" name="name" id="name">
-          <label for="email">Email address</label>
-          <input type="email" name="email" id="email">
-          <label for="message">Your message</label>
-          <textarea type="text" name="message" id="message"></textarea>
-          <input type="submit" value="Send message">
+          <div class="contact-form">
+            <p class="dark">I'd love to have a chat so feel free to get in touch below</p>
+            <label class="dark" for="name">Your name</label>
+            <input type="text" name="name" id="name">
+            <label class="dark" for="email">Email address</label>
+            <input type="email" name="email" id="email">
+            <label class="dark" for="message">Your message</label>
+            <textarea type="text" name="message" id="message"></textarea>
+            <input type="submit" value="Send message">
+          </div>
         </form>
 
 
