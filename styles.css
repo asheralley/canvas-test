@@ -16,8 +16,6 @@ body{
 
 nav {
   color: #ececec;
-  /* display: flex;
-  justify-content: space-between; */
   display: inline;
 }
 
@@ -28,7 +26,7 @@ nav {
 
 .nav-right {
   display: inline-block;
-  /* background-color: #232323; */
+  margin-top: 1.45em;
 }
 
 .nav-list {
@@ -42,6 +40,10 @@ nav {
   display: inline;
   margin-left: 5em;
   font-size: 1.25em;
+}
+
+.nav-list li:first-child{
+  margin-left: 0;
 }
 
 .nav-list li a {
@@ -116,6 +118,7 @@ nav {
   font-size: 3em;
   text-align: center;
   letter-spacing: 3px;
+  cursor: default;
 }
 
 .nav-center {
@@ -189,6 +192,13 @@ section.home {
 
 .section-heading {
   text-align: center;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  margin: 2em 0 1em;
+}
+
+.header-decoration{
+  margin-right: 0.3em;
 }
 
 .about-content {
@@ -204,6 +214,11 @@ section.home {
   text-align: justify;
   padding: 0 1em 0 0;
   width: 50%;
+}
+
+.tech-images {
+  text-align: center;
+  margin: 3em 0 2em;
 }
 
 .contact {
