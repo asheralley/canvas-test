@@ -221,9 +221,21 @@ section.home {
   margin: 3em 0 2em;
 }
 
+.row-work {
+    display: flex;
+    justify-content: center;
+    max-height: 337px;
+}
+
 .image-group {
   position: relative;
   display: inline-block;
+}
+
+.work-img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #232323;
 }
 
 .overlay {
@@ -231,19 +243,20 @@ section.home {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #008CBA;
+  background-color: rgba(255, 255, 255, 0.85);
   overflow: hidden;
   width: 0;
   height: 100%;
   transition: .5s ease;
 }
 
+
 .image-group:hover .overlay{
-  width: 50%;
+  width: 100%;
 }
 
 .text {
-  color: white;
+  color: #111;
   font-size: 20px;
   position: absolute;
   top: 50%;
