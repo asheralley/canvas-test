@@ -1,12 +1,13 @@
--> Sticky nav
--> Edit work images
--> Scroll to position
--> About section
--> Work section - hover effect on items
--> Contact form
+-> Scroll to position -> from nav's
+-> Contact form (style the form)
 -> Contact form functionality -> php form
 -> Get url and set up new droplet
--> Flavicon and page title
+-> Mobile responsive
+    -> Check all images
+    -> Check sizing and spacing
+    -> Add work click functionality
+    -> Mobile nav - > layout etc
+-> Scroll to top
 
 Work
 -> DWD
@@ -15,4 +16,5 @@ Work
 -> Pops Games
 -> Mainly Books
 -> Quizzical
+-> Insurance project
 
