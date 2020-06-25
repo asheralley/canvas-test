@@ -1,6 +1,6 @@
 -> Scroll to position -> from nav's
 -> Contact form (style the form)
--> Contact form functionality -> php form
+-> Contact form functionality -> validation
 -> Get url and set up new droplet
 -> Mobile responsive
     -> Check all images

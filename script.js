@@ -1,6 +1,6 @@
-const canvas = document.getElementById('canvas1');
+const canvas = document.getElementById("canvas1");
 
-const ctx = canvas.getContext('2d');
+const ctx = canvas.getContext("2d");
 ctx.canvas.width = window.innerWidth;
 ctx.canvas.height = window.innerHeight;
 let particleArray;
@@ -12,7 +12,7 @@ let mouse = {
   radius: 80
 };
 
-window.addEventListener('mousemove', function(event) {
+window.addEventListener("mousemove", function (event) {
   mouse.x = event.x;
   mouse.y = event.y;
 });
@@ -27,7 +27,7 @@ function Particle(x, y, directionX, directionY, size, color) {
   this.color = color;
 }
 
-Particle.prototype.draw = function() {
+Particle.prototype.draw = function () {
   ctx.beginPath();
   ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
   ctx.fillStyle = this.color;
@@ -35,7 +35,7 @@ Particle.prototype.draw = function() {
 };
 
 // add update method to particle prototype
-Particle.prototype.update = function() {
+Particle.prototype.update = function () {
   if (this.x + this.size > canvas.width || this.x - this.size < 0) {
     this.directionX = -this.directionX;
   }
@@ -58,22 +58,22 @@ Particle.prototype.update = function() {
   if (distance < mouse.radius + this.size) {
     if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
       // this.x += 1;
-      this.directionX = dx / distance * 0.4;
+      this.directionX = (dx / distance) * 0.4;
     }
     if (mouse.x > this.x && this.x > this.size * 10) {
       // this.x -= 1;
       // this.directionX = (dx / 2) * 0.05;
-      this.directionX = dx / distance * 0.4;
+      this.directionX = (dx / distance) * 0.4;
     }
     if (mouse.y < this.x && this.x < canvas.height - this.size * 10) {
       //this.y += 1;
       // this.directionY = (dy / 2) * 0.05;
-      this.directionY = dy / distance * 0.4;
+      this.directionY = (dy / distance) * 0.4;
     }
     if (mouse.y > this.x && this.y > this.size * 10) {
       // this.y -= 1;
       // this.directionY = (dy / 2) * 0.05;
-      this.directionY = dy / distance * 0.4;
+      this.directionY = (dy / distance) * 0.4;
     }
   }
 
@@ -88,13 +88,19 @@ Particle.prototype.update = function() {
 function init() {
   particleArray = [];
   // adjust number of particles based on screen size
-  for (let i = 0; i < 150; i++) {
+  let particleNumber = 0;
+  if (window.screen.width < 768) {
+    particleNumber = 80;
+  } else {
+    particleNumber = 150;
+  }
+  for (let i = 0; i < particleNumber; i++) {
     let size = 0.3;
     let x = Math.random() * (innerWidth - size * 2);
     let y = Math.random() * (innerHeight - size * 2);
     let directionX = Math.random() * 0.4 - 0.2;
     let directionY = Math.random() * 0.4 - 0.2;
-    let color = '#ececec';
+    let color = "#ececec";
 
     particleArray.push(new Particle(x, y, directionX, directionY, size, color));
   }
@@ -124,7 +130,7 @@ function connect() {
           (particleArray[a].y - particleArray[b].y);
       if (distance < (canvas.width / 7) * (canvas.height / 7)) {
         opacityValue = 1 - distance / 30000;
-        ctx.strokeStyle = 'rgba(140,140,140,' + opacityValue + ')';
+        ctx.strokeStyle = "rgba(140,140,140," + opacityValue + ")";
         ctx.lineWidth = 1;
         ctx.beginPath();
         ctx.moveTo(particleArray[a].x, particleArray[a].y);
@@ -136,13 +142,13 @@ function connect() {
 }
 
 //resize event
-window.addEventListener('resize', function() {
+window.addEventListener("resize", function () {
   canvas.width = innerWidth;
   canvas.height = innerHeight;
   mouse.radius = 80;
 });
 
-window.addEventListener('mouseout', function() {
+window.addEventListener("mouseout", function () {
   mouse.x = undefined;
   mouse.y = undefined;
 });
