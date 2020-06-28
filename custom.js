@@ -11,6 +11,7 @@ function stickyNavOnScroll() {
 
   // Get the header
   let header = document.getElementById("stickyNav");
+  let about = document.getElementById("about");
 
   // Get the offset position of the navbar
   let sticky = header.offsetTop;
@@ -19,8 +20,10 @@ function stickyNavOnScroll() {
   function myFunction() {
     if (window.pageYOffset > sticky) {
       header.classList.add("sticky");
+      about.classList.add("nav-offset");
     } else {
       header.classList.remove("sticky");
+      about.classList.remove("nav-offset");
     }
   }
 }
@@ -47,7 +50,7 @@ function formSubmit(event) {
     // we can use server response to our request now
     // handle successful send message here
     if (request.status == 200) {
-      let messageText = "Message sent! Thanks for contacting me.";
+      let messageText = "Message sent! Thanks for getting in touch.";
       feedBack.innerHTML = messageText;
       nameInput.value = "";
       emailInput.value = "";
@@ -77,12 +80,23 @@ function attachFormSubmitEvent(formId) {
 attachFormSubmitEvent("contactForm");
 
 // smooth scroll to elements
-function smoothScroll(e) {
+function smoothScroll(e, offSetVal) {
   let el = e.target;
   let parent = el.parentElement;
   let anchor = parent.getAttribute("loc");
-  document.getElementById(anchor).scrollIntoView({ behavior: "smooth" });
+  let yOffset = offSetVal;
+  //document.getElementById(anchor).scrollIntoView({ behavior: "smooth" });
+  let element = document.getElementById(anchor);
+  if (anchor === "contact") {
+    yOffset = 0;
+  }
+  let y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+  window.scrollTo({ top: y, behavior: "smooth" });
 }
 
-document.getElementById("stickyNav").addEventListener("click", smoothScroll);
-document.getElementById("mainNav").addEventListener("click", smoothScroll);
+document.getElementById("stickyNav").addEventListener("click", function (e) {
+  smoothScroll(e, 0);
+});
+document.getElementById("mainNav").addEventListener("click", function (e) {
+  smoothScroll(e, -80);
+});
