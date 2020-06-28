@@ -80,23 +80,23 @@ function attachFormSubmitEvent(formId) {
 attachFormSubmitEvent("contactForm");
 
 // smooth scroll to elements
-function smoothScroll(e, offSetVal) {
-  let el = e.target;
-  let parent = el.parentElement;
-  let anchor = parent.getAttribute("loc");
-  let yOffset = offSetVal;
-  //document.getElementById(anchor).scrollIntoView({ behavior: "smooth" });
-  let element = document.getElementById(anchor);
-  if (anchor === "contact") {
-    yOffset = 0;
-  }
-  let y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-  window.scrollTo({ top: y, behavior: "smooth" });
-}
-
-document.getElementById("stickyNav").addEventListener("click", function (e) {
-  smoothScroll(e, 0);
-});
-document.getElementById("mainNav").addEventListener("click", function (e) {
-  smoothScroll(e, -80);
-});
+//function smoothScroll(e, offSetVal) {
+//  let el = e.target;
+//  let parent = el.parentElement;
+//  let anchor = parent.getAttribute("loc");
+//  let yOffset = offSetVal;
+//  //document.getElementById(anchor).scrollIntoView({ behavior: "smooth" });
+//  let element = document.getElementById(anchor);
+//  if (anchor === "contact") {
+//    yOffset = 0;
+//  }
+//  let y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+//  window.scrollTo({ top: y, behavior: "smooth" });
+//}
+//
+//document.getElementById("stickyNav").addEventListener("click", function (e) {
+//  smoothScroll(e, 0);
+//});
+//document.getElementById("mainNav").addEventListener("click", function (e) {
+//  smoothScroll(e, -80);
+//});
