@@ -315,6 +315,7 @@ input[type="submit"]:hover {
 
 .footer-divider {
   border-top: 1px solid #3e3e3e;
+  display: none;
 }
 
 .copy-right {
@@ -454,7 +455,7 @@ input[type="submit"]:hover {
 
   .about-blurb {
     padding: 0 1em 0 0;
-    width: 50%;
+    width: 64%;
   }
 
   .profile-img {
