@@ -5,7 +5,8 @@
 }
 
 body {
-  font-family: "Catamaran", sans-serif;
+  font-family: 'Catamaran', sans-serif;
+  overflow-x: hidden;
 }
 
 #canvas1 {
@@ -263,6 +264,11 @@ input {
   margin-bottom: 1.2em;
 }
 
+input[type='checkbox'] {
+  position: absolute;
+  left: 9999;
+}
+
 textarea#message {
   width: 100%;
   height: 200px;
@@ -271,7 +277,7 @@ textarea#message {
   font-family: inherit;
 }
 
-input[type="submit"] {
+input[type='submit'] {
   background: transparent;
   border: 2px solid #e3e3e3;
   color: #e3e3e3;
@@ -279,7 +285,7 @@ input[type="submit"] {
   padding-bottom: 2em;
 }
 
-input[type="submit"]:hover {
+input[type='submit']:hover {
   background: #e3e3e3;
   color: #111;
 }
@@ -337,7 +343,7 @@ input[type="submit"]:hover {
 
   .nav-list li span::before,
   .nav-list li span::after {
-    content: "/";
+    content: '/';
     position: absolute;
     opacity: 0;
     transition: all ease-in-out 0.22s;
@@ -387,7 +393,7 @@ input[type="submit"]:hover {
 
   .sticky-nav-list li span::before,
   .sticky-nav-list li span::after {
-    content: "/";
+    content: '/';
     position: absolute;
     opacity: 0;
     transition: all ease-in-out 0.22s;
