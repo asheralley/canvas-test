@@ -10,8 +10,6 @@ html {
 
 body {
     font-family: 'Catamaran', sans-serif;
-    font-family: 'Catamaran', sans-serif;
-    overflow-x: hidden;
 }
 
 #canvas1 {
@@ -164,10 +162,6 @@ section.home {
     height: 100vh;
 }
 
-.work {
-    padding-top: 1em;
-}
-
 .nav-offset {
     padding-top: 92px;
 }
@@ -293,11 +287,6 @@ input {
     margin-bottom: 1.2em;
 }
 
-input[type='checkbox'] {
-    position: absolute;
-    left: 9999;
-}
-
 textarea#message {
     width: 100%;
     height: 200px;
@@ -307,17 +296,7 @@ textarea#message {
 }
 
 input[type='submit'] {
-    <<<<<<<headbackground: transparent;
-    border: 2px solid #e3e3e3;
-    color: #e3e3e3;
-    text-transform: uppercase;
-    padding-bottom: 2em;
-}
-
-input[type='submit']:hover {
-    background: #e3e3e3;
-    color: #111;
-    =======background: transparent;
+    background: transparent;
     border: 2px solid #e3e3e3;
     color: #e3e3e3;
     text-transform: uppercase;
@@ -486,131 +465,6 @@ input[type='submit']:hover {
 
     .work {
         padding-top: 92px;
-    }
-
-    .contact-form {
-        width: 30%;
-    }
-    ======= .nav-list {
-        text-transform: uppercase;
-        display: inline-block;
-        list-style: none;
-        margin-top: 1.45em;
-    }
-
-    .nav-list li {
-        font-size: 1.25em;
-        margin-left: 5em;
-    }
-
-    .nav-list li span {
-        text-decoration: none;
-        color: inherit;
-        position: relative;
-        cursor: pointer;
-    }
-
-    .nav-list li span::before,
-    .nav-list li span::after {
-        content: '/';
-        position: absolute;
-        opacity: 0;
-        transition: all ease-in-out 0.22s;
-    }
-
-    .nav-list li span::before {
-        top: 0;
-        left: 0;
-        transform: translate(-300%, 100%);
-    }
-
-    .nav-list li span::after {
-        bottom: 0;
-        left: 0;
-        transform: translate(-100%, -100%);
-    }
-
-    .nav-list li span:hover:before {
-        transform: translate(-150%, 0);
-        opacity: 1;
-    }
-
-    .nav-list li span:hover:after {
-        transform: translate(-250%, 0);
-        opacity: 1;
-    }
-
-    .name-main {
-        font-size: 3em;
-        letter-spacing: 3px;
-    }
-
-    .main-logo {
-        width: auto;
-    }
-
-    ul.sticky-nav-list li {
-        margin-right: 2.4em;
-    }
-
-    ul.sticky-nav-list li span {
-        color: inherit;
-        text-decoration: none;
-        position: relative;
-        cursor: pointer;
-    }
-
-    .sticky-nav-list li span::before,
-    .sticky-nav-list li span::after {
-        content: '/';
-        position: absolute;
-        opacity: 0;
-        transition: all ease-in-out 0.22s;
-    }
-
-    .sticky-nav-list li span::before {
-        top: 0;
-        left: 0;
-        transform: translate(-300%, 100%);
-    }
-
-    .sticky-nav-list li span::after {
-        bottom: 0;
-        left: 0;
-        transform: translate(-100%, -100%);
-    }
-
-    .sticky-nav-list li span:hover:before {
-        transform: translate(-150%, 0);
-        opacity: 1;
-    }
-
-    .sticky-nav-list li span:hover:after {
-        transform: translate(-250%, 0);
-        opacity: 1;
-    }
-
-    .section-heading {
-        font-size: 1.9em;
-    }
-
-    .about-content {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -ms-flex-pack: space-evenly;
-        justify-content: space-evenly;
-    }
-
-    .about-blurb {
-        padding: 0 1em 0 0;
-        width: 50%;
-    }
-
-    .profile-img {
-        width: 85%;
-        max-width: 300px;
     }
 
     .contact-form {
